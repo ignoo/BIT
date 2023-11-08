@@ -1,0 +1,30 @@
+body {
+    background: rgb(0,0,0);
+    background: linear-gradient(45deg, rgba(0,0,0,1) 68%, rgba(208,109,22,1) 88%, rgba(255,45,4,1) 96%);
+    color: cadetblue;
+    font-family: 'Comic Neue', cursive;
+    margin: 0;
+}
+a:link, a:visited {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    font-size: 30px;
+    border-radius: 10px;
+    transition: all 0.8s;
+    cursor: crosshair;
+}
+.button1 {
+    background-color: forestgreen;
+    padding: 15px 32px;
+    float: right;
+  }
+.button2 {
+    background-color: firebrick;
+    padding: 15px 60px;
+    float: left;
+  }
+.button1:hover, .button2:hover {
+    background-color: cadetblue;
+}

@@ -1,0 +1,130 @@
+body {
+    background: lightgray;
+    box-sizing: border-box;
+    margin: 0;
+    padding-bottom: 150px;
+    border: 20px solid #514B23;
+
+}
+
+.eye1 {
+    position: relative;
+    float: left;
+}
+
+.eye2 {
+    position: relative;
+    float: right;
+}
+
+h1 {
+    color: #514B23;
+    font-family: 'Dancing Script', cursive;
+    font-size: 60px;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+div.list {
+    text-align: center;
+}
+
+ul.ul1 {
+    font-family: 'Comic Neue', cursive;
+    list-style-image: url("../pics/lizardsmol.png");
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 50px;
+}
+
+a:link, a:visited {
+    background-color: #514B23;
+    width: 200px;
+    height: 50px;
+    text-decoration: none;
+    color: lightgray;
+    font-weight: 700;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    margin: 15px;
+    border-radius: 15px;
+    line-height: 50px;
+    bottom: 12px;  
+    transition: all 1.6s;
+}
+
+a:hover {
+    background-color: lightgray;
+    color: #514B23;
+}
+
+article {
+    font-family: 'Comic Neue', cursive;
+    color: lightgray;
+    text-align: center;
+    background-color: #514B23;
+    position: relative;
+    width: 31.62vw;
+    height: 40vh;
+    box-sizing: border-box;
+    display: inline-table;
+    margin:1px -3px 0px 0px;
+    padding: 15px;
+    top: 150px;
+    transition: all 1s;
+    
+}
+
+i{
+    color: coral;
+}
+
+article.container1:hover {
+    background-image: url("../pics/panther_hover.jpg");
+}
+
+article.container2:hover {
+    background-image: url("../pics/veiled.jpg");
+}
+
+article.container3:hover {
+    background-image: url("../pics/jacksons_hover.jpg");
+}
+
+article.container4:hover {
+    background-image: url("../pics/parsons_hover.jpg");
+}
+
+article.container5:hover {
+    background-image: url("../pics/brookesia.jpg");
+}
+
+
+article:hover {
+    color: rgba(0, 0, 0, 0);
+    background-size: contain;
+}
+
+a.up {
+    background-color: orange;
+    opacity: .7;
+    color: #514B23;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    text-align: center;
+    line-height: 50px;
+    box-sizing: border-box;
+    position: fixed;
+    top: calc(100vh - 70px);
+    left: calc(100vw - 80px);
+    
+    
+
+}
