@@ -1,0 +1,1046 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+ol,
+ul {
+  list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+}
+blockquote,
+q {
+  quotes: "" "";
+}
+
+@font-face {
+  font-family: SellenaBrush;
+  src: url("fonts/SellenaBrush.ttf");
+}
+
+@font-face {
+  font-family: QueensidesLight;
+  src: url("fonts/QueensidesLight.ttf");
+}
+
+@font-face {
+  font-family: Queensides;
+  src: url("fonts/Queensides.ttf");
+}
+
+@font-face {
+  font-family: QueensidesMedium;
+  src: url("fonts/QueensidesMedium.ttf");
+}
+
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: QueensidesLight;
+  font-size: 10px;
+  font-weight: 600;
+  overflow-x: hidden;
+}
+
+div.container {
+  display: flex;
+  width: 100vw;
+  padding: 5px 20px;
+  background-color: lightgray;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.announcement {
+  font-size: 10px;
+}
+
+header {
+  margin: 0 60px;
+  padding: 10px 40px;
+  box-sizing: border-box;
+}
+
+.top-bar {
+  display: flex;
+  height: 60px;
+}
+
+.top-bar .burger {
+  cursor: pointer;
+}
+
+.menu {
+  display: block;
+  position: absolute;
+  transform: translateX(-300px);
+  transition: transform 0.8s ease-in-out;
+}
+
+input[type=checkbox]:checked + .menu {
+  transform: translateX(0);
+}
+
+input {
+  display: none;
+}
+
+.menu .x {
+  content: 'X';
+  position: absolute;
+  top: 10px;
+  left: 210px;
+  font-family: QueensidesMedium;
+  font-weight: bolder;
+  font-size: 16px;
+}
+
+.x:hover {
+  cursor: pointer;
+}
+
+.menu .menu-bar-container {
+  height: 100vh;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  top: 0px;
+  float: 0;
+  justify-content: flex-start;
+  padding-top: 20px;
+}
+
+.menu .main-nav-link-drop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu .main-nav-link-drop .greater {
+  border-left: solid 1px lightgray;
+  padding-left: 5px;
+}
+
+.menu li.sale {
+  display: flex;
+  height: 40px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.menu li.sale:hover {
+  cursor: pointer;
+}
+
+.menu .main-nav-item.sale .pic {
+  object-fit: cover;
+  align-items: center;
+  flex-grow: 1;
+  min-width: 30%;
+}
+
+.menu .main-nav-item .sale {
+  display: flex;
+  align-items: center;
+  background-color: lightgray;
+  flex-grow: 1;
+  padding-left: 10px;
+}
+
+.menu .currency {
+  border: solid 1px dimgray;
+  border-radius: 4px;
+  margin-left: 10px;
+  margin-right: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.top-bar-left {
+  display: flex;
+  width: 33vw;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.top-bar-middle {
+  display: flex;
+  width: 33vw;
+  justify-content: center;
+  font-family: SellenaBrush;
+  font-size: 40px;
+  font-weight: normal;
+  align-items: center;
+}
+
+.top-bar-right {
+  display: flex;
+  width: 33vw;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+img {
+  width: 14px;
+  object-fit: cover;
+}
+
+div.button {
+  padding-left: 10px;
+  flex-grow: 0;
+  align-content: center;
+}
+
+div.menu-bar {
+  border-bottom: 1px solid lightgray;
+}
+
+ul.menu-bar-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+ul.menu-bar-container li {
+  font-size: 12px;
+  margin: 0 5px;
+  padding: 8px 10px;
+  flex-grow: 0;
+}
+
+ul.menu-bar-container li ul {
+  display: none;
+  opacity: 0;
+  min-width: 150px;
+  background-color: darkgray;
+  color: beige;
+  position: absolute;
+  margin-top: 8px;
+  transition: all 1s;
+}
+
+/* .main-nav-item:hover {
+  border-bottom: solid 2px dimgray;
+} */
+
+.main-nav-item-dropdown:hover .dropdown {
+  opacity: 1;
+  display: block;
+}
+
+.dropdown:hover {
+  opacity: 1;
+  display: block;
+}
+
+ul.menu-bar-container li ul li a {
+  color: white;
+}
+
+main {
+  margin: 0 60px;
+  padding: 10px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 2px;
+  background-image: url("pics/top1.jpg");
+  height: 260px;
+  background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+}
+
+.banner-container .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner-container .row1 {
+  font-family: QueensidesMedium;
+  font-weight: bolder;
+  font-size: 14px;
+  text-align: center;
+  color: white;
+}
+
+.banner-container .row2 {
+  font-family: QueensidesMedium;
+  font-size: 40px;
+  font-weight: bolder;
+  text-align: center;
+  color: white;
+}
+
+.banner-container .row3 {
+  padding-top: 10px;
+  text-align: center;
+  color: white;
+}
+
+
+.banner-container .buttons {
+  padding-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.banner-container .buttons a {
+  background-color: white;
+  font-size: 18px;
+  font-weight: lighter;
+  padding: 4px 10px;
+  margin: 0 10px;
+  border-radius: 3px;
+  transition: all 0.2s;
+  border: solid 1px white;
+}
+
+.banner-container .buttons a:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.banner-container .bottom-part {
+  display: flex;
+  
+}
+
+.banner-container .button {
+  flex: 0 0 8px;
+  height: 8px;
+  background-color: rgba(0, 0, 0, 0);
+  border: solid 2px white;
+  border-radius: 5px;
+  padding: 0;
+  margin: 0 7px;
+}
+
+.banner-container .button:hover {
+  cursor: pointer;
+}
+
+[type="radio"]:checked + label {
+  background-color: white;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+}
+
+main h2 {
+  font-family: QueensidesMedium;
+  font-weight: bolder;
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+
+.main-content .testimonials {
+  display: flex;
+  margin-right: -10px;
+}
+
+.testimonials .testimonial {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 33%;
+}
+
+.testimonial .solditem {
+  display: flex;
+  background-color: lightgray;
+  border: solid 1px darkgray;
+  border-radius: 2px;
+  margin-right: 10px;
+}
+
+.testimonial .solditem .itempic {
+  object-fit: cover;
+  min-width: 80px;
+  height: 60px;
+  flex-shrink: 2;
+}
+
+.testimonial .solditem .text {
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  padding: 10px 10px 10px 15px;
+  gap: 5px;
+  flex-shrink: 1;
+}
+
+.stars {
+  width: 80px;
+  padding: 7px 0;
+}
+
+.testimonial .comment {
+  padding: 0 20px 10px 0;
+}
+
+.testimonial .user {
+  display: flex;
+}
+
+.testimonial .user .text {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial .user .profilepic {
+  width: 22px;
+  padding-right: 10px;
+}
+
+.testimonial .user .name {
+  padding-bottom: 2px;
+  font-family: QueensidesMedium;
+}
+
+.main-content .staffhead {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+.main-content .seeall {
+  font-size: 12px;
+}
+
+.main-content .picks {
+  display: flex;
+  justify-content: space-between;
+  margin-right: -23px;
+  align-items: center;
+}
+
+.picks .pick {
+  display: flex;
+  flex-direction: column;
+  padding-right: 10px;
+  flex-grow: 1;
+}
+
+.picks .pick3 {
+  visibility: collapse;
+  position: absolute;
+}
+
+
+
+
+.pick .productpic.one {
+  background-image: url("pics/black-rock.jpg");
+}
+
+.pick .productpic.one:hover {
+  background-image: url("pics/black-zoomed.jpg");
+}
+
+.pick .productpic.two {
+  background-image: url("pics/sharp.jpg");
+}
+
+.pick .productpic.two:hover {
+  background-image: url("pics/sharp-zoomed.jpg");
+}
+
+.pick .productpic {
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 2px;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
+  transition: 0.5s linear;
+}
+
+.pick .productpic .sale {
+  color: white;
+  background-color: firebrick;
+  padding: 5px;
+  border-radius: 1px;
+}
+
+.pick .name {
+  font-size: 12px;
+  padding-bottom: 5px;
+}
+
+.pick .price .discountprice {
+  color: firebrick;
+}
+
+.pick .price .oldprice {
+  color: darkgray;
+  text-decoration: line-through;
+}
+
+.pick .reviews .stars {
+  padding-bottom: 0;
+}
+
+.picks .next {
+  font-size: 25px;
+  color: dimgray;
+}
+
+.picks .next:hover {
+  cursor: pointer;
+}
+
+.main-content .video-container {
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+}
+
+.video-container video {
+  object-fit: cover;
+  position: absolute;
+  max-width: 79vw;
+  border-radius: 2px;
+  z-index: 0;
+}
+
+.video-container .caption {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: 16px;
+}
+
+.video-container .caption .text2 {
+  font-family: QueensidesMedium;
+  font-weight: bolder;
+  font-size: 36px;
+  padding-bottom: 20px;
+}
+
+.video-container .caption .button {
+  background-color: white;
+  border: none;
+  border-radius: 4px;
+  font-family: Queensides;
+  padding: 6px 14px;
+  transition: all 0.2s;
+  border: solid 1px white;
+}
+
+.video-container .caption .button:hover {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  cursor: pointer;
+}
+
+.main-content .mini-collection {
+  display: flex;
+  justify-content: space-between;
+  margin-right: -10px;
+  flex-wrap: wrap;
+}
+
+.mini-collection .container {
+  background-color: lightgray;
+  display: flex;
+  margin-right: 10px;
+  border-radius: 2px;
+  border: solid 1px darkgray;
+  justify-content: flex-start;
+  padding: 0;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.mini-collection .container .pic {
+  object-fit: cover;
+  width: 80px;
+  height: 60px;
+}
+
+.mini-collection .container .text {
+  padding-left: 8px;
+}
+
+.main-content .essay {
+  display: flex;
+  margin: 60px 0;
+  height: 300px;
+}
+
+.essay .pic {
+  width: 40vw;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.essay .text {
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  font-size: 14px;
+}
+
+.essay .text .text1 {
+  font-family: QueensidesMedium;
+}
+
+.essay .text .text2 {
+  display: inline-block;
+  background-color: lightgray;
+}
+
+.essay .text .button {
+  background-color: dimgray;
+  color: white;
+  border-radius: 4px;
+  padding: 10px 25px;
+  border: solid 1px;
+  transition: all 0.4s;
+}
+
+.essay .text .button:hover {
+  background-color: white;
+  color: darkgray;
+  cursor: pointer;
+}
+
+.main-content .gallery-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  margin-right: -10px;
+}
+
+.main-content .gallery-row .gal-container{
+  margin-right: 10px;
+}
+
+.main-content .gallery-one {
+  display: flex;
+}
+
+.gallery-row .gallery-item1 {
+  background-image: url("pics/gallery1.jpg");
+}
+
+.gallery-row .gallery-item2 {
+  background-image: url("pics/gallery2.jpg");
+}
+
+.gallery-row .gallery-item3 {
+  background-image: url("pics/gallery3.jpg");
+}
+
+.gallery-one .gallery-item4 {
+  background-image: url("pics/gallery4.jpg");
+}
+
+.main-content .gal-container {
+  height: 180px;
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.main-content .gal-item {
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+.main-content .gal-item:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.main-content .gal-item:hover button.gal {
+  transform: scale(0.92);
+}
+
+.main-content button.gal {
+  background-color: white;
+  border: solid 1px white;
+  border-radius: 2px;
+  font-family: Queensides;
+  padding: 8px 20px;
+  transition: all 0.2s;
+}
+
+.main-content button.gal:hover {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  cursor: pointer;
+}
+
+.main-content .subscribe {
+  display: flex;
+  margin-top: 60px;
+  justify-content: center;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.subscribe .pic {
+  object-fit: cover;
+  align-items: center;
+  height: 280px;
+  min-width: 50%;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.subscribe .text {
+  display: flex;
+  flex-direction: column;
+  background-color: ghostwhite;
+  justify-content: center;
+  padding: 0 15px;
+  font-size: 14px;
+  gap: 10px;
+}
+
+.subscribe .text .text1 {
+  font-family: QueensidesMedium;
+}
+
+.subscribe .text .input {
+  font-family: QueensidesLight;
+  font-weight: lighter;
+  background-color: white;
+  border: solid 1px lightgray;
+  border-radius: 2px;
+  padding: 15px 0 15px 5px;
+}
+
+.subscribe .text .input:hover {
+  cursor: text;
+}
+
+.subscribe .text .submit-button {
+  background-color: dimgray;
+  border: solid 1px dimgray;
+  border-radius: 2px;
+  color: white;
+  padding: 8px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.subscribe .text .submit-button:hover {
+  color: dimgray;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+}
+
+footer .footer-menu {
+  margin: 0 60px;
+  padding: 60px 0 30px;
+  display: flex;
+  border-top: solid 1px lightgray;
+  border-bottom: solid 1px lightgray;
+  justify-content: space-between;
+}
+
+footer .footer-menu .footer-menu-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0;
+  padding: 0 20px;
+}
+
+footer h2 {
+  font-family: QueensidesMedium;
+  margin: 0 5px;
+  padding: 8px 10px;
+}
+
+footer a {
+  margin: 8px 0;
+  padding: 0 5px;
+}
+
+footer p {
+  margin: 8px 5px;
+  padding: 0 10px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 60px;
+  padding: 30px 0 60px;
+  min-height: 100px;
+
+}
+
+.footer .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer .column .currency {
+  background-color: white;
+  border-radius: 2px;
+  border: solid 1px lightgray;
+  padding: 5px 5px;
+}
+
+.footer .column .currency:hover {
+  cursor: pointer;
+}
+
+.footer .column .small-nav {
+  display: flex;
+}
+
+.footer .social {
+  display: flex;
+}
+
+.cards img {
+  width: 120px;
+}
+.column ul {
+  padding-bottom: 15px;
+}
+
+ul.social {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+@media only screen and (max-width: 900px) {
+  header {
+    margin: 0 10px;
+  }
+  main {
+    margin: 0 10px;
+  }
+  footer {
+    margin: 0 10px;
+  }
+  .main-content .video-container {
+    height: 410px;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .burger {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  header {
+    padding: 10px 10px;
+  }
+  main {
+    padding: 10px 10px;
+  }
+  footer {
+    padding: 10px 10px;
+  }
+  .burger {
+    display: block;
+  }
+  .top-bar-right .currency {
+    display: none;
+  }
+  .top-bar-right .user {
+    display: none;
+  }
+  .top-bar-left .mail {
+    display: none;
+  }
+  .menu-bar {
+    display: none;
+  }
+  .main-content .video-container {
+    height: 320px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* .banner-container .buttons {
+    flex-direction: column;
+  } */
+  .main-content .video-container {
+    height: 230px;
+  }
+  .testimonials {
+    flex-direction: column;
+  }
+  .testimonial {
+    padding-bottom: 20px;
+  }
+  .essay {
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0;
+    padding-bottom: 100px;
+    gap: 10px;
+  }
+  .essay .pic {
+    max-width: 430px;
+    flex-shrink: 1;
+    flex-grow: 1;
+  }
+  .essay .text {
+    padding: 0;
+    gap: 10px;
+    align-items: center;
+  }
+  .subscribe {
+    flex-wrap: wrap;
+  }
+  .subscribe .text {
+    width: 100%;
+  }
+  .footer-menu a{
+    display: none;
+  }
+  .footer-menu p {
+    display: none;
+  }
+  .footer-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  .footer-menu h2 {
+    border-bottom: solid 1px darkgray;
+    font-size: 16px;
+  }
+  .footer-menu h2:hover {
+    cursor: pointer;
+  }
+}

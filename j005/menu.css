@@ -5,10 +5,28 @@ body {
     font-size: 16px;
 }
 
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
+.top-menu {
+    border-bottom: 3px solid black;
+    height: 70px;
+    padding-left: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+    .top-menu {
+        display: none;
+    }
+}
+
 .top-bar {
     width: 100%;
     height: 70px;
-    border-bottom: 3px solid black;
+    position: relative;;
 }
 
 .burger {
@@ -18,6 +36,13 @@ body {
     border-radius: 3px;
     position: relative;
     margin-top: 15px;
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .burger {
+        display: block;
+    }
 }
 
 .burger::before {
@@ -50,19 +75,29 @@ label {
     right: 15px;
 }
 
+input {
+    display: none;
+}
+
 .menu {
-    width: 10%;
+    width: 300px;
     height: 100vh;
-    background-color: bisque;
+    background-color: #006400;
     position: absolute;
     top: 0;
     left: 0;
-    transform: translateX(0);
-    opacity: .9;
-    transition: 0.5s ease-in-out;
+    transform: translateX(-300px);
+    transition: transform 0.5s ease-in-out;
+    display: none;
 }
 
-input:checked ~ .menu {
+@media only screen and (max-width: 600px) {
+    .menu {
+        display: block;
+    }
+}
+
+input[type=checkbox]:checked + .menu {
     transform: translateX(0);
 }
 
@@ -75,14 +110,15 @@ input:checked ~ .menu {
 
 .menu h2 label {
     position: absolute;
-    right: 20;
+    right: 20px;
     top: -10px;
-
-
+    cursor: pointer;
+    font-size: 30px;
+    text-align: right;
 }
 
-.menu::after {
-    content: '\274C';
+.menu h2 label::after {
+    content: 'x';
     position: absolute;
     right: 10px;
     top: 10px;
@@ -99,12 +135,125 @@ input:checked ~ .menu {
     border-bottom: 1px solid greenyellow;
 }
 
+.menu ul li a {
+    text-decoration: none;
+    color: greenyellow;
+    font-size: 20px;
+}
+
 .menu ul li ul li {
-    padding-left: 0 0 0 20px;
-    font-size: 10px;
+    padding: 0 0 0 20px;
     border-bottom: none;
 }
 
 .menu ul li ul li a {
     font-size: 12px;
+}
+
+.top-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.top-menu ul li {
+    display: inline-block;
+    padding: 5px;
+}
+
+.top-menu ul li a {
+    text-decoration: none;
+    color: lightseagreen;
+    font-size: 14px;
+    transition: all .3s;
+}
+
+.top-menu ul li ul li a {
+    font-size: 8px;
+}
+
+.top-menu ul li a:hover {
+    color: greenyellow;
+}
+
+h1 {
+    text-align: center;
+    margin:  50px 0;
+    font-size: 50px;
+    color: greenyellow;
+}
+
+.bin {
+    width: 60%;
+    margin: 0 auto;
+    font-size: 0;
+}
+
+.bin .sq {
+    width: 100px;
+    height: 100px;
+    background-color: greenyellow;
+    display: inline-block;
+    font-size: 20px;
+    text-align: center;
+    line-height: 100px;
+    margin: 1px 1px 0 0;
+}
+
+.bin .sq:nth-child(1) {
+    background-color: blue;
+}
+
+.bin .sq:nth-child(3) {
+    background-color: chocolate;
+}
+
+.bin .sq:nth-child(even) {
+    background-color: pink;
+}
+
+.bin .sq:last-child {
+    background-color: cornflowerblue;
+}
+
+@media only screen and (max-width: 1515px) {
+    .bin .sq:nth-child(9) {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1347px) {
+    .bin .sq:nth-child(8) {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1178px) {
+    .bin .sq:nth-child(7) {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1010px) {
+    .bin .sq:nth-child(6) {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 842px) {
+    .bin .sq:nth-child(6) {
+        display: inline-block;
+    }
+    .bin .sq:nth-child(7) {
+        display: inline-block;
+    }
+    .bin .sq:nth-child(8) {
+        display: inline-block;
+    }
+}
+
+@media only screen and (max-width: 673px) {
+    .bin .sq:nth-child(9) {
+        display: inline-block;
+    }
 }
