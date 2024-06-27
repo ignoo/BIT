@@ -1,0 +1,54 @@
+.reviews {
+    background-color: $light-bg;
+    margin-top: -20px;
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .arrow {
+        padding: 0 60px;
+        width: 20px;
+        object-fit: cover;
+        z-index: 2;
+
+    .reviews-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+
+        .stars {
+            font-size: 36px;
+            color: #e13c5a;
+
+        }
+
+        .review {
+            text-align: center;
+            font-size: 14px;
+            font-weight: 500;
+
+        }
+
+        .profile {
+
+            img {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            p {}
+        }
+    }
+}
+}
+
+.big-white-box {
+    height: 700px;
+
+}

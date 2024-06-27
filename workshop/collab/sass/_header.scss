@@ -1,0 +1,50 @@
+
+
+
+header {
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+    .india {
+        font-family: 'DM sans';
+        font-size: 700;
+        color: #fff;
+        background-color: $secondary-color;
+        text-align: center;
+        padding: 10px;
+        font-size: 13px;
+        a:link,
+        a:visited {
+            color: inherit;
+        }
+    }
+    .head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        padding: 30px 20px;
+        h1 {
+            color: $primary-color;
+            font-family: 'Comfortaa';
+            margin-left: 50px;
+            font-weight: 500;
+            font-size: 48px;
+        }
+        nav {
+            margin-left: auto;
+            ul {
+                display: flex;
+                list-style: none;
+                gap: 40px;
+                li {
+                    font-family: 'Roboto';
+                    font-weight: 500;
+                }
+                a:link,
+                a:visited {
+                    text-decoration: none;
+                    color: #000;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.btn {
+    font-family: 'Roboto';
+    font-weight: 700;
+    color: $primary-color;
+    border: solid 2px $primary-color;
+    border-radius: 3px;
+    padding: 15px 20px;
+    text-decoration: none;
+    display: inline-block;
+    &--dark {
+        background-color: $primary-color;
+        color: #fff;
+        padding: 15px 40px;
+    }
+    &--composition {
+        position: absolute;
+        width: 180px;
+        text-align: center;
+        background-color: #fff;
+        transform: translateY(300px);
+        color: #000;
+        padding: 12px 20px;
+        border-width: 3px;
+        box-shadow: 0 3px 7px rgba(0,0,0, 0.1);
+        font-weight: 500;
+
+        // animation
+        animation-name: button;
+        animation-duration: 1s;
+        animation-delay: 2.8s;
+        animation-fill-mode: backwards;
+    }
+}

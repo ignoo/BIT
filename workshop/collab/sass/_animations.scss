@@ -1,0 +1,40 @@
+@keyframes lighter {
+    from {
+        transform: translateX(-200%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%);
+        opacity: 1;
+    }
+}
+
+@keyframes darker {
+    from {
+        transform: translateX(300%) translateY(14px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%) translateY(14px);
+    }
+}
+
+@keyframes phone {
+    from {
+        transform: translateX(-50%) translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%) translateY(25px);
+        opacity: 1;
+    }
+}
+
+@keyframes button {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
