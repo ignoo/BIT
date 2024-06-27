@@ -1,0 +1,67 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.duog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border: solid 1px black;
+  background-color: olive;
+}
+
+.doge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: firebrick;
+  width: 80px;
+  height: 80px;
+}
+
+.container {
+  display: flex;
+  gap: 10px;
+  font-weight: bolder;
+  text-decoration: dimgray;
+}
+
+.non {
+  display: none;
+}
+
+.zalia {
+  color: green;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.raudona {
+  color: firebrick;
+  font-weight: bolder;
+  font-size: larger;
+}

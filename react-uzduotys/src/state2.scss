@@ -1,0 +1,117 @@
+    
+    
+.whole {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 99vw;
+    gap: 20px;
+    overflow-x: hidden;
+    padding-bottom: 60px;
+    .title {
+        font-size: 40px;
+        font-weight: 900;
+        border-bottom: 3px solid black;
+        border-top: 3px solid black;
+        width: 100%;
+        text-align: center;
+    }
+    .uzd1 {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 600px;
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 30%;
+            max-width: 30%;
+            min-height: 500px;
+            .medis {
+                display: flex;
+                justify-content: flex-start;
+                align-content: flex-start;
+                width: 100%;
+                height: 100%;
+                background-color: green;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 0;
+                div{
+                    height: 60px;
+                    width: 60px;
+                    border-radius: 2px;
+                    &.azuolas {
+                        background-color: rgb(67, 49, 22);
+                    }
+                    &.berzas {
+                        background-color: rgb(123, 103, 28);
+                    }
+                    &.uosis {
+                        background-color: rgb(155, 127, 57);
+                    }
+                }
+            }
+        }
+    }
+    .uzd2 {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .container2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            min-height: 400px;
+            gap: 20px;
+            width: 98%;
+            .kvadrat {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100px;
+                height: 100px;
+                background-color: black;
+                border-radius: 2px;
+            }
+            .nom {
+                color: white;
+            }
+        }
+    }
+    .uzd3 {
+        text-align: center;
+        h2 {
+            color: green;
+            font-size: 100px;
+        }
+    }
+} 
+
+button {
+    width: 100px;
+    height: 50px;
+    background-color: rgb(255, 174, 0);
+    border: solid 5px black;
+    border-radius: 10px;
+    font-weight: 900;
+    margin: 5px;
+    &.plus {
+        all: initial;
+        color: rgb(255, 72, 0);
+        font-size: 40px;
+        font-weight: 900;
+    }
+&:hover {
+    background-color: rgb(255, 255, 0);
+    cursor: pointer;
+}
+&:active {
+    padding-top: 5px;
+    border-top: 8px solid black;
+    border-bottom: 2px solid black;
+}
+}

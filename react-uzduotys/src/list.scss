@@ -1,0 +1,43 @@
+.App-header {
+    display: flex;
+    flex: wrap;
+    background-color: darkgray;
+        .uzduotis1 {
+            border: 5px solid magenta;
+        }
+        .uzduotis2 {
+            border: 5px solid firebrick;
+            .container {
+                border: 2px solid firebrick;
+            }
+        }
+        .uzduotis3 {
+            border: 5px solid cyan;
+            .container {
+                border: 2px solid cyan;
+            }
+        }
+        .uzduotis4 {
+            border: 5px solid rgb(53, 128, 128);
+            .container {
+                border: 2px solid rgb(53, 128, 128);
+                span {
+                    color: firebrick;
+                }
+            }
+            
+        }
+        .uzduotis5 {
+            border: 5px solid rgb(4, 69, 46);
+            .container {
+                border: 2px solid rgb(4, 69, 46);
+                .kontik {
+                    border: 2px solid rgb(4, 69, 46);
+                }
+                span {
+                    color: firebrick;
+                }
+            }
+            
+        }
+}

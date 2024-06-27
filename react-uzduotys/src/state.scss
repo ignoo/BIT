@@ -1,0 +1,40 @@
+.App-header {
+    .container {
+        display: flex;
+        flex-direction: column;
+        border: solid 5px rgb(126, 59, 59);
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        .shape {
+            width: 60px;
+            height: 60px;
+            background-color: firebrick;
+            text-align: center;
+            line-height: 60px;
+        }
+        .circ {
+            border-radius: 50%;            
+        }
+        .squareCont {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+    }
+
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    background-color: rgb(175, 175, 0);
+    border: solid 5px black;
+    border-radius: 10px;
+    font-weight: 900;
+    margin: 5px;
+&:hover {
+    background-color: rgb(205, 205, 25);
+    cursor: pointer;
+}
+}
